@@ -1,4 +1,4 @@
-FROM golang:1.12
+FROM golang:latest
 
 WORKDIR /go/src/
 
@@ -11,4 +11,3 @@ RUN mkdir -p github.com/eleoterio/neoway
 RUN cp -R service github.com/eleoterio/neoway
 
 RUN cd github.com/eleoterio/neoway
-RUN go run service/main.go
