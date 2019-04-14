@@ -10,7 +10,7 @@ import (
 
 //FILE caminho/arquivo csv ou txt a ser lido
 const (
-	FILE = "/home/eleoterio/Projetos/go/src/github.com/eleoterio/neoway/service/file/base_teste.txt"
+	FILE = "service/file/base_teste.txt"
 )
 
 func main() {

@@ -1,5 +1,15 @@
 version: '3'
 services:
+  app:
+    build: .
+    volumes:
+      - .:/go/src
+    ports:
+      - "80:8080"
+    depends_on:
+      - postgres
+    links:
+      - "postgres:postgres"
   db:
     image: postgres
     environment:
@@ -7,15 +17,4 @@ services:
       POSTGRES_USER: postgres-dev
       POSTGRES_PASSWORD: s3cr3tp4ssw0rd
     ports:
-      - 5432:5432
-  app:
-    build: .
-    command: ["go", "run", "main.go"]
-    volumes:
-      - .:/go/src/service
-    ports:
-      - "80:8080"
-    depends_on:
-      - db
-    links:
-      - db
+      - 5432:5432  

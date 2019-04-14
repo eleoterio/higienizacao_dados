@@ -1,9 +1,14 @@
-FROM golang:1.8
+FROM golang:1.12
 
-RUN mkdir -p /go/src/app
+WORKDIR /go/src/
+
+ADD . /go/src/
+
 RUN go get github.com/jmoiron/sqlx
-WORKDIR /go/src/app
+RUN go get github.com/lib/pq
 
-ADD . /go/src/app
+RUN mkdir -p github.com/eleoterio/neoway
+RUN cp -R service github.com/eleoterio/neoway
 
-RUN go get -v
+RUN cd github.com/eleoterio/neoway
+RUN go run service/main.go
