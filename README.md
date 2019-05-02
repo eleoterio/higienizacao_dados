@@ -1,4 +1,4 @@
-# Neoway - Projeto para Higienização de dados
+# Projeto para Higienização de dados
 
 
 ## Indice
@@ -35,7 +35,7 @@
 ## Instalação
 Após a instalação do docker e do git, baixar o projeto:
 ```
-git clone https://github.com/eleoterio/neoway
+git clone https://github.com/eleoterio/higienizacao_dados
 ```
 entrar na pasta raiz do projeto e executar:
 ```
